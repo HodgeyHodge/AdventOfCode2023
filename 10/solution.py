@@ -1,4 +1,4 @@
-
+import re
 
 def load_file(filename):
     with open(filename, 'r') as file:
@@ -76,8 +76,45 @@ def part_one(filename):
         p1 = progress(circuit, *p1)
         p2 = progress(circuit, *p2)
         if p1[0] == p2[0] and p1[1] == p2[1]:
-            print(f"{filename}: {n}")
+            print(f"Part one, {filename}: {n}")
             break
+
+def get_all_tiles(circuit, i, j, d):
+    output = []
+    p = [i, j, d]
+    while True:
+        output.append((p[0], p[1]))
+        p = progress(circuit, *p)
+        if p[0] == i and p[1] == j:
+            break
+    return output
+
+def part_two(filename):
+    circuit = load_file(filename)
+    i, j, d = find_start(circuit)
+    circuit[i] = circuit[i].replace("S", patch_circuit(i, j, d))
+    
+    tiles = get_all_tiles(circuit, i, j, d[0])
+
+    score = 0
+    for i, row in enumerate(circuit):
+        row = re.sub("F-*7", lambda x: "X" * len(x.group()), row)
+        row = re.sub("L-*J", lambda x: "X" * len(x.group()), row)
+
+        status = "out"
+        for j, glyph in enumerate(row):
+            if (i, j) in tiles:
+                if glyph in ["F", "|", "L"]:
+                    status = ("out" if status == "in" else "in")
+            else:
+                if status == "in":
+                    score += 1
+
+    print(f"Part two, {filename}: {score}")
+
 
 part_one("testinput1.txt")
 part_one("input.txt")
+
+part_two("testinput1.txt")
+part_two("input.txt")
