@@ -1,0 +1,14 @@
+broadcaster -> nc
+%hj -> lk, hh
+%hr -> hh
+%pp -> vs, hh
+%nc -> hh, hj
+%lk -> hh, zd
+%rk -> hh, hr
+%rv -> rk, hh
+%bp -> hh, rv
+%zd -> fm
+%kq -> pp
+%vs -> bp
+%fm -> kq
+&hh -> vs, kq, gt, nc, zd, fm

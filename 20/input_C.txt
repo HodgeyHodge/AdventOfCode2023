@@ -1,0 +1,14 @@
+broadcaster -> zn
+%tn -> kz, lt
+%hc -> kz
+%zn -> kz, fv
+%gf -> zf, kz
+%lt -> ls, kz
+%qf -> kz, tn
+%ls -> hc, kz
+%fv -> nh, kz
+%vx -> df
+%nh -> vx
+%df -> gf
+%zf -> qf
+&kz -> zf, nl, df, zn, vx, nh

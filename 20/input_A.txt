@@ -1,0 +1,14 @@
+broadcaster -> br
+%rb -> ns, mf
+%mf -> ns, gp
+%xv -> ns, kh
+%jz -> lj, ns
+%br -> gv, ns
+%kh -> ns, jz
+%lj -> ns
+%fp -> rb
+%pb -> xv
+%gp -> pb
+%jl -> fp
+%gv -> jl
+&ns -> pb, lr, br, fp, gp, gv, jl

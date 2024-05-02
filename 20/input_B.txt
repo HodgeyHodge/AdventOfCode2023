@@ -1,0 +1,14 @@
+broadcaster -> tf
+%vb -> ck
+%tf -> ck, tx
+%tx -> mr, ck
+%sc -> ck, vb
+%cc -> ck, rj
+%rj -> ck, sc
+%vh -> ck, tg
+%tg -> cc
+%rg -> tp
+%tp -> pc
+%mr -> rg
+%pc -> vh
+&ck -> tp, vr, pc, tg, mr, tf, rg
