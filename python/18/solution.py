@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 def load_file(filename, type):
     with open(filename, 'r') as file:
@@ -27,11 +27,11 @@ def enumerate_boundary(data):
         boundary[index] = current
     return boundary
 
-def graph_boundary(boundary):
-    xs, ys = zip(*boundary.values())
-    plt.plot(xs, ys, '-')
-    plt.plot(xs, ys, 'o')
-    plt.show()
+#def graph_boundary(boundary):
+#    xs, ys = zip(*boundary.values())
+#    plt.plot(xs, ys, '-')
+#    plt.plot(xs, ys, 'o')
+#    plt.show()
 
 def compute_volume(boundary):
     inverted_boundary = dict((v, k) for k, v in boundary.items())
@@ -113,22 +113,22 @@ if __name__ == "__main__":
     data = load_file("testinput.txt", 1)
     boundary = enumerate_boundary(data)
     print(1 + compute_volume(boundary) + compute_boundary_length(boundary) / 2)
-    graph_boundary(boundary)
+    #graph_boundary(boundary)
 
     print("Part one, live data")
     data = load_file("input.txt", 1)
     boundary = enumerate_boundary(data)
     print(1 + compute_volume(boundary) + compute_boundary_length(boundary) / 2)
-    graph_boundary(boundary)
+    #graph_boundary(boundary)
 
     print("Part two, test data")
     data = load_file("testinput.txt", 2)
     boundary = enumerate_boundary(data)
     print(1 + compute_volume(boundary) + compute_boundary_length(boundary) / 2)
-    graph_boundary(boundary)
+    #graph_boundary(boundary)
 
     print("Part two, live data")
     data = load_file("input.txt", 2)
     boundary = enumerate_boundary(data)
     print(1 + compute_volume(boundary) + compute_boundary_length(boundary) / 2)
-    graph_boundary(boundary)
+    #graph_boundary(boundary)

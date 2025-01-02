@@ -90,21 +90,29 @@ if __name__ == "__main__":
     print("part one, test data")
     map_ = read_file("testinput.txt")
     vertices = traverse_map(map_)
+    print("===========================")
+    print(vertices)
     find_longest_walk(vertices, (22, 21)) # JANK, look at it -_-
 
     print("part one, live data")
     map_ = read_file("input.txt")
     vertices = traverse_map(map_)
+    print("===========================")
+    print(vertices)
     find_longest_walk(vertices, (140, 139))
     
     print("part two, test data")
     map_ = read_file("testinput.txt")
     vertices = traverse_map(map_, False)
+    print("===========================")
+    print(vertices)
     find_longest_walk(vertices, (22, 21))
 
     print("part one, live data")
     map_ = read_file("input.txt")
     vertices = traverse_map(map_, False)
+    print("===========================")
+    print(vertices)
     find_longest_walk(vertices, (140, 139)) # also this doesn't perform well AT ALL
 
 

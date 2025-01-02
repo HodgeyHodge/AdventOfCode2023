@@ -1,0 +1,1 @@
+Initially I joined in with Zoopla's Advent of Code challenge 2023, in Python, and got 48 stars.  Then, after doing 2024's in Zig, I enjoyed it so much that I came back here to get the rest, and fix the slow ones.
