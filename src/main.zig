@@ -3,6 +3,7 @@ const common = @import("common.zig");
 
 const day1 = @import("solutions/1.zig");
 const day17 = @import("solutions/17.zig");
+const day25 = @import("solutions/25.zig");
 
 const Frame = common.Frame;
 const Part = common.Part;
@@ -112,7 +113,7 @@ const runs = &[_]Run{
 
     //TODO: re-write 24 to address part 2
 
-    //TODO: re-write 25 to find the nodes automatically
+    Run.init(25, Part.One, "live.txt", day25.solve, &[_]SolutionType{SolutionType{ .Integer = 571753 }}),
 };
 
 pub fn main() !void {
